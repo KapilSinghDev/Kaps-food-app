@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from './Logo';
-// import Logo from './Components/Logo'
+import Smalllogo from '../Smalllogo';
+// import Logo from './Logo'
 import Textdiv from './Textdiv'
 import Usernav from './Usernav';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -12,7 +12,7 @@ let count = 0;
   return (
     <div className='navbar'>
         <div className='nav-left'>
-            <Logo/>
+            <Smalllogo/>
         </div>
         <div className='nav-mid'>
             <Textdiv info={'search'}/>

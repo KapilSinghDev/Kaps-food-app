@@ -5,7 +5,7 @@ const Foodcat = (props) => {
     <div className='food-cat'>
       {props.title}
       <div className={props.className}>  
-        <img src={props.url} alt={''}/>
+        <img className={props.imageClass} src={props.url} alt={''}/>
         <div className='food-cat-one'>
           {props.offer}
         </div>

@@ -12,6 +12,7 @@ import Cards from './Cards';
 // import breakfast  from './images/breakfast (2).jpg'
 // import momos from './images/momos.jpg'
 import imagesPath from './imageAddress'
+import Pagefooter from './Pagefooter';
 const Firstpage = () => {
   console.log(imagesPath)
   const settings = {
@@ -29,19 +30,20 @@ const Firstpage = () => {
     <div className='second-page'>
       <Navbar />
       <div className='first-row'>
-        <Foodcat className={'food-big-img'} url={icecreamImage} offer={'20% OFF'} />
-        <Foodcat className={'food-big-img'} url={burgerking} offer={'50% OFF'} />
+        <Foodcat className={'food-big-img'} imageClass={'img-big'} url={'https://cdn.pixabay.com/photo/2017/11/30/08/56/ice-cream-2987955_1280.jpg'} offer={'20% OFF'} />
+        <Foodcat className={'food-big-img'} imageClass={'img-big'} url={'https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.jpg'} offer={'50% OFF'} />
       </div>
       <div className='second-row'>
         <div className='second-row-one'>
-          <Foodcat className={'food-sm-img-lt'} url={''} />
-          <Foodcat className={'food-sm-img-lt'} url={''} />
-          <Foodcat className={'food-sm-img-lt'} url={''} />
+          {/* implement this more cleanly with image mapping */}
+          <Foodcat className={'food-sm-img-lt'} imageClass={'img-sm'} url={'https://img.icons8.com/?size=512&id=12869&format=png'} />
+          <Foodcat className={'food-sm-img-lt'} imageClass={'img-sm'} url={'https://img.icons8.com/?size=512&id=NGOlxBMiOFvi&format=png'} />
+          <Foodcat className={'food-sm-img-lt'} imageClass={'img-sm'} url={'https://img.icons8.com/?size=512&id=fXIkRiBdwaXC&format=png'} />
         </div>
         <div className='second-row-one'>
-          <Foodcat className={'food-sm-img-rt'} url={smallburger} />
-          <Foodcat className={'food-sm-img-rt'} url={''} />
-          <Foodcat className={'food-sm-img-rt'} url={''} />
+          <Foodcat className={'food-sm-img-rt'} imageClass={'img-sm'} url={'https://img.icons8.com/?size=512&id=aXQUbhHPUKqv&format=png'} />
+          <Foodcat className={'food-sm-img-rt'} imageClass={'img-sm'} url={'https://img.icons8.com/?size=512&id=rvujxIWwV9Aa&format=png'} />
+          <Foodcat className={'food-sm-img-rt'} imageClass={'img-sm'} url={'https://img.icons8.com/?size=512&id=1tk2FK7vFBhe&format=png'} />
         </div>
       </div>
       <h3 className='first-row-head'>Nearby Restaurants</h3>
@@ -59,6 +61,7 @@ const Firstpage = () => {
           })} */}
         </div>
       </div> 
+      <Pagefooter/>
     </div>
   );
 };
