@@ -7,9 +7,13 @@ import Descbox from './Descbox';
 import pizzajpg  from './images/pizza.jpg';
 import cofjpg from './images/coffee.jpg';
 import pastajpg from './images/Pasta.jpg'
+import Smalllogo from '../Smalllogo';
+import Mobloginform from './Mobloginform';
+// import Mobilenav from './Mobilenav';
 // import './App.scss';
 function Homepage() {
   return (
+  <>
     <div className='first-page'>
       <div className='left-login'>
         <Logo/>
@@ -29,6 +33,7 @@ function Homepage() {
                 amt={'$10.55'}
             />
             <Descbox  
+                className='slider'
                 url={pastajpg} 
                 description={"Pasta, a beloved Italian dish, is made from durum wheat semolina and offers endless culinary possibilities with its versatile shapes and delectable taste."}
                 amt={'$15.55'}
@@ -46,6 +51,11 @@ function Homepage() {
         </h3>
       </div>
     </div>
+    <div className='mob-login'>
+      <Smalllogo/>
+     <Mobloginform/>
+    </div>
+</>
   )
 }
 

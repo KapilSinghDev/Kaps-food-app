@@ -8,6 +8,10 @@ import { FaYoutube } from 'react-icons/fa'
 import FootCol from './FootCol'
 function Pagefooter() {
   return (
+    <>
+    <div className='mob-foot'>
+
+    </div>
     <div className='footer-sm'>
       <div className='footer-sm-lt'>
         <Footerlogo/>
@@ -39,9 +43,10 @@ function Pagefooter() {
             line2={"Guarantee"}
             line3={"Security"}
             line4={"Pricing"}
-        />
+            />
       </div>
     </div>
+  </>
   )
 }
 
