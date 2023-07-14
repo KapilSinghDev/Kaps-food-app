@@ -1,35 +1,36 @@
 import React , {useState} from 'react'
 import {AiOutlineEyeInvisible , AiOutlineEye} from 'react-icons/ai';
-const Passdiv = (prop1 , prop2) => {
-    const [text, setText] = useState(prop1.info);
-    const [editing , setEditing] = useState(false);
+const Passdiv = (props) => {
+    const[pwd , setPwd] = useState("");
+    //  function to store what ever is typed in 
+    const collectPassword = (event) => {
+      if(event.key === 'Enter'){
+        setPwd(event.target.value);
+        console.log(pwd);
+        console.log("the length of the password = ", pwd.length)
+      }
+      
+    }
+    let status;
     const[eyeClicked , setEyeClicked] = useState(false); 
-  
-    function erase(event){
-          setEditing(true);
-          setText('');
-    }
-  
-    function typehere(event) {
-      setText(event.target.textContent);
-    }
     const changeEye = () => {
-        setEyeClicked(!eyeClicked)
+        setEyeClicked(!eyeClicked) 
+        status = eyeClicked ? 'idle' : 'active'
+        console.log(status)
     }
+
+    
     return (
       <div className='pass-box'>
-        <div className='pass-box-1'
-        contentEditable='true'
-        onClick={erase}
-        onInput={typehere}
-        onBlur={() => setEditing(false)}
-        >
-            {/* if editing is true then show '' else show text*/}
-            {editing ? '':text}
-            
-        </div>
+        <input className='pass-box-1' 
+          type={eyeClicked ? 'text':'password'}
+          placeholder={'enter your password'}
+          // value={(pwd)}
+          onKeyDown={collectPassword}
+        />    
         <div className='pass-icon' onClick={changeEye}>
             {eyeClicked?<AiOutlineEye/> : <AiOutlineEyeInvisible/>}
+            
         </div>
       </div>
     );

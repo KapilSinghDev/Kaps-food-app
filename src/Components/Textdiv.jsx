@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 
 const Textdiv = (props) => {
-  // const [text, setText] = useState(props.info);
-  // const [editing , setEditing] = useState(false);
 
-  // function erase(event){
-  //       setEditing(true);
-  //       setText('');
-  // }
-
-  // function typehere(event) {
-  //   setText(event.target.textContent);
-  // }
 const [searchValue, setSearchValue] = useState("");
 function handleSearch(e){
   if(e.key==='Enter'){
@@ -19,22 +9,27 @@ function handleSearch(e){
     setSearchValue("")
   }
 }
+// const [input,setInput] = useState("");
+// const [count,setCount] = useState(0);
+
+// const handleType = (event) => {
+//   setInput(event.target.value);
+//   setCount(input.split(" ").length);
+// }
+
+
+// console.log("The number of words = ",count);
   return (
     <div>
-      <input className='text-box' type="text" placeholder='Search...' value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} onKeyDown={handleSearch} />
+      <input className='text-box' type="text" 
+      placeholder={props.placeholder} 
+      value={searchValue}
+      onChange={(e)=>setSearchValue(e.target.value)} 
+      onKeyDown={handleSearch}
+      // onChange={handleType}
+       />
     </div>
   )
 }
 
 export default Textdiv;
-
-
-    // <div className='text-box'
-    // contentEditable='true'
-    // onClick={erase}
-    // onInput={typehere}
-    // onBlur={() => setEditing(false)}
-    // >
-        {/* if editing is true then show '' else show text*/
-        /* {editing ? '':text}
-    </div> */}

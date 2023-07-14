@@ -148,7 +148,7 @@
         border: 1px solid rgb(87, 86, 86);
         width: 350px;
         height: 35px;
-        background-color: rgb(223, 220, 220);
+        background-color: rgb(199, 237, 250);
         border-radius: 10px;  
     }
     .pass-icon{
@@ -172,6 +172,9 @@
     border-radius: 10px;
     font-weight: bold;
     color: white;
+    &:hover{
+        cursor: pointer;
+    }
 }
 .button-type-2{
     font-weight: bold;
@@ -183,6 +186,19 @@
         cursor: pointer;
     }
 }
+.alert-web{
+    @media (max-width:767px){
+        display: none;
+        width: 300px;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    width: 300px;
+    text-align: center;
+    display: block;
+    
+}
+
 .foot-divs{
     width: auto;
     height: auto;
