@@ -69,6 +69,15 @@
     }
     
 }
+.cir-lod{
+    margin-left : 50%;
+    margin-right : 50%;
+    
+    // margin-bottom: 50%;
+    height: fit-content;
+    width: fit-content;
+    // background-color: pink;
+}
 .header-logo{
     margin-left: 50px;
     // background-color: aquamarine;
@@ -88,7 +97,7 @@
 }
 .header-logo-sm{
     margin-top: 0px;
-    margin-left: 55px;
+    margin-left: 25px;
     // border: 1px solid red;
     height: auto;
     width: 100px;
@@ -189,7 +198,8 @@
 .alert-web{
     @media (max-width:767px){
         display: none;
-        width: 300px;
+        // height: 15px;
+        width: 250px;
         margin-left: 20px;
         margin-top: 5px;
     }
@@ -263,6 +273,23 @@
 
 }
 .second-page{
+    .second-page-mob{
+        display: none;
+        @media (max-width:767px) {
+            display: block;
+            height: 100VH;
+            width: 100%;
+            .mob-first-row{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: fit-content;
+                width: fit-content;
+                margin-top: 15px;
+                margin-left: 50px;
+            }
+        }
+    } 
     height: 100vh;
     width: 100%;
     .first-row-head{
@@ -275,6 +302,10 @@
         text-align: start;
         margin-top:10px ;
         margin-left: 60px;
+        // display: block;
+        @media (max-width:767px) {
+            display: none;
+        }
     }
     .first-row{
         margin-top: 0px;
@@ -282,6 +313,10 @@
         flex-direction: row;
         height: 200px;
         width: 100%;
+        // display: block;
+        @media (max-width:767px) {
+            display: none;
+        }
         // background-color: aqua;
     }
     .second-row{
@@ -299,6 +334,10 @@
             // background-color: yellow;
             margin-left: 185px;
         }
+        @media (max-width:767px) {
+            display: none;
+        }
+        
     }
     .third-row{
         height: 220px;
@@ -319,9 +358,86 @@
             justify-content: space-between;
             background-color: red;
         }
+        @media (max-width:767px) {
+            display: none;
+        }
+    }
+}
+.mob-cards-blue{
+    background-color: lightblue;
+    height: 30%;
+    width: 90%;
+    border-radius: 5%;
+    margin-top:  20px;
+    margin-left: 20px;
+    overflow: hidden;
+    // position: absolute;
+}
+.mob-tile-text-1{
+    color: blue;
+    position: absolute;
+    font-size: 40px;
+    top: 8%;
+    left: 5%;
+}
+.mob-cards-orange{
+    background-color:pink;
+    height: 30%;
+    width: 90%;
+    border-radius: 5%;
+    margin-top:  20px;
+    margin-left: 20px;  
+    overflow: hidden;  
+}
+.mob-tile-text-2{
+    color: red;
+    position: absolute;
+    font-size: 40px;
+    top: 40%;
+    left: 05%;
+}
+.mob-card-img{
+    height: 300px;
+    width: 400px;
+}
+.mob-tile{
+    background-color: lightblue;
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+    border-radius: 10%;
+    overflow:hidden;
+    .tile-icons{
+        height: 100px;
+        width: 100px;
+    }
+}
+.mob-cards-res{
+    height: 20%;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: 2%;
+    // background-color: aqua;
+    .mob-res-img{
+        height: 80%;
+        width: 100%;
+        background-color: yellow;
+        overflow: hidden;
+        .mob-res-img-one{
+            height: 110px;
+            width: 370px;
+        }
     }
 }
 .navbar{
+    @media (max-width:767px) {
+        display: none;
+    }
     display: flex;
     flex-direction: row;
     height: 70px ;
@@ -564,6 +680,9 @@
     }
 }
 .footer-sm{
+    @media (max-width:767px) {
+        display: none;
+    }
     height: 13.5%;
     width: 100%;
     background-color: rgb(29, 29, 61);
@@ -644,6 +763,26 @@
         display: flex;
         flex-direction: column;
     }
+}
+.mob-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .mob-nav-icon{
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    // position:absolute
+}
+.mob-menu-box{
+    height:80px;
+    width: 120px;
+    background-color: rgb(215, 216, 226);
+    // margin-top: 20px;
+    color: blue;
+    margin-left: 68%;
+    // border-radius: 10%;
+    position: absolute;
 }
 .mob-form{
     display: none;

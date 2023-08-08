@@ -9,6 +9,7 @@ import cofjpg from './images/coffee.jpg';
 import pastajpg from './images/Pasta.jpg'
 import Smalllogo from '../Smalllogo';
 import Mobloginform from './Mobloginform';
+
 // import Mobilenav from './Mobilenav';
 // import './App.scss';
 function Homepage() {

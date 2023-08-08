@@ -1,0 +1,10 @@
+const resnames = [
+    {
+        resName:
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+]
